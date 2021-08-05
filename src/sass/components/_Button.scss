@@ -1,0 +1,38 @@
+.btn {
+  position: relative;
+  display: inline-block;
+  padding: 1.5rem 3rem;
+  background: transparent;
+  color: $color-primary;
+  font-size: 1.5rem;
+  border: 3px solid $color-primary;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.6s;
+  backface-visibility: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: inline-block;
+    background-color: $color-primary;
+    height: 100%;
+    width: 105%;
+    border: 3px solid $color-primary;
+    border-radius: 0 0 50% 50%;
+    transform-origin: top;
+    transform: scaleY(0);
+    transition: all 0.6s;
+    z-index: -1;
+    backface-visibility: hidden;
+  }
+
+  &:hover {
+    color: white;
+    &::before {
+      transform: scaleY(2);
+    }
+  }
+}

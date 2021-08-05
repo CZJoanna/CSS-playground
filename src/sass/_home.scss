@@ -1,0 +1,37 @@
+main {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 420px;
+  max-width: 768px;
+  margin: 0 auto;
+  font-family: monospace, sans-serif;
+  font-size: 22px;
+}
+
+main label {
+  display: block;
+  color: $color-primary;
+}
+
+main input[type="range"] {
+  display: block;
+  margin-bottom: 10px;
+  width: 200px;
+}
+
+section.settings {
+  width: 50%;
+  z-index: 2;
+}
+
+.box-container {
+  padding: 50px;
+  border: 1px solid $color-primary;
+}
+
+.box {
+  width: 150px;
+  height: 150px;
+  background-color: $color-primary;
+}
