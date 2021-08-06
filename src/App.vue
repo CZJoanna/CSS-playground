@@ -16,7 +16,7 @@
           <label>rotateZ: {{ rotateZ }}deg; </label>
           <input type="range" min="-180" max="180" v-model="rotateZ" />
 
-          <button class="btn" @click.prevent="reset">Reset</button>
+          <Button :msg="'Reset'" :handleClick="reset" />
         </div>
       </section>
       <section class="output">
@@ -29,8 +29,10 @@
 </template>
 
 <script>
+import Button from "./components/Button";
 export default {
   name: "App",
+  components: { Button },
 
   data() {
     return {
@@ -63,3 +65,6 @@ export default {
   },
 };
 </script>
+
+  <style lang="scss">
+</style>

@@ -1,5 +1,5 @@
 <template>
-  <button class="btn">{{ msg }}</button>
+  <button class="btn" @click.prevent="handleClick">{{ msg }}</button>
 </template>
 
 <script>
@@ -7,6 +7,7 @@ export default {
   name: "Button",
   props: {
     msg: String,
+    handleClick: Function,
   },
 };
 </script>
